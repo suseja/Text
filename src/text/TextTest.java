@@ -22,7 +22,7 @@ public class TextTest {
     @Test
     public void testCountCharacters() {
 
-        Text newText = new Text(0,0);
+        Text newText = new Text(0, 0);
 
         newText.countCharacters("hejhej");
         int actual = newText.getCharacters();
@@ -34,9 +34,24 @@ public class TextTest {
     }
 
     @Test
+    public void testCountCharactersSentence() {
+
+        Text newText = new Text(0, 0);
+
+        newText.countCharacters("Today is Saturday");
+        int actual = newText.getCharacters();
+
+        int expected = 17;
+
+        assertEquals(expected, actual);
+    }
+
+
+    @Test
+
     public void testGetNumberOfRows() {
 
-        Text newText = new Text(0,0);
+        Text newText = new Text(0, 0);
 
         int actual = newText.getNumberOfRows();
 
@@ -46,9 +61,9 @@ public class TextTest {
     }
 
     @Test
-    public void testCountLines() {
+    public void testAddOneRow() {
 
-        Text newText = new Text(0,0);
+        Text newText = new Text(0, 0);
 
         newText.addOneRow();
         int actual = newText.getNumberOfRows();
@@ -57,10 +72,11 @@ public class TextTest {
 
         assertEquals(expected, actual);
     }
-    @Test
-    public void testCount3Lines() {
 
-        Text newText = new Text(0,0);
+    @Test
+    public void testCount3Rows() {
+
+        Text newText = new Text(0, 0);
         newText.countCharacters("hejsan hej");
         newText.addOneRow();
         newText.countCharacters("hehej");
@@ -72,7 +88,7 @@ public class TextTest {
         int expected = 3;
 
         assertEquals(expected, actual);
-    }
 
+    }
 
 }
