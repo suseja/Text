@@ -6,9 +6,10 @@ public class Text {
     private int numberOfRows;
     private boolean userTypedStop;
 
-    public Text(int myCharacters, int numberOfRows) {
+    public Text(int myCharacters, int myNumberOfRows) {
+
         characters = myCharacters;
-        numberOfRows = 0;
+        numberOfRows = myNumberOfRows;
     }
 
     public int getCharacters() {
@@ -21,14 +22,23 @@ public class Text {
         return numberOfRows;
     }
 
+    public void countCharacters(String inputText) {
+
+        characters += inputText.length();
+    }
+
     public void addOneRow() {
 
         numberOfRows += 1;
     }
 
-    public void countCharacters(String inputText) {
-
-        characters += inputText.length();
+    public void addTextline(String textline) {
+        if (textline.contains("stop")) {
+            userTypedStop = true;
+        } else {
+            addOneRow();
+            countCharacters(textline);
+        }
     }
 
     public boolean lastLineContainedStop() {
