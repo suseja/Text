@@ -10,6 +10,7 @@ public class Text {
 
         characters = myCharacters;
         numberOfRows = myNumberOfRows;
+
     }
 
     public int getCharacters() {
@@ -22,9 +23,9 @@ public class Text {
         return numberOfRows;
     }
 
-    public void countCharacters(String inputText) {
+    public void countCharacters(String charactersWritten) {
 
-        characters += inputText.length();
+        characters += charactersWritten.length();
     }
 
     public void addOneRow() {
@@ -42,6 +43,7 @@ public class Text {
     }
 
     public boolean lastLineContainedStop() {
+
         return userTypedStop;
     }
 }

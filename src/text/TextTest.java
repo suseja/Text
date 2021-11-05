@@ -91,4 +91,33 @@ public class TextTest {
 
     }
 
+    @Test
+    public void testStopTrue() {
+
+        Text newText = new Text(0, 0);
+
+        newText.addTextline("stop");
+        boolean actual = newText.lastLineContainedStop();
+
+        boolean expected = true;
+
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testStopFalse() {
+
+        Text newText = new Text(0, 0);
+
+        newText.addTextline("other");
+        boolean actual = newText.lastLineContainedStop();
+
+        boolean expected = false;
+
+        assertEquals(expected, actual);
+
+    }
+    //Add test stop, other word, true, false
+
 }
