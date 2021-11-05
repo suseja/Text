@@ -118,6 +118,5 @@ public class TextTest {
         assertEquals(expected, actual);
 
     }
-    //Add test stop, other word, true, false
-
+    
 }

@@ -10,18 +10,7 @@ public class MyText {
         Text myText = new Text(0, 0);
 
         System.out.println("Please enter your text. Print 'stop' when you want the program to end. ");
-        /*
-        while (true) {
-            String nextLine = scan.nextLine();
-
-            myText.addTextline(nextLine);
-
-            boolean userHasTypedStop = myText.lastLineContainedStop();
-            if (userHasTypedStop) break;
-        }
-        */
-
-        // condition is checked after 1 loop iteration
+       
         do {
             String nextLine = scan.nextLine();
             myText.addTextline(nextLine);
